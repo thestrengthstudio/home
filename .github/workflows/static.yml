@@ -1,0 +1,625 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The Strength Studio — 1:1 Sport-Specific Training (Lancaster, MA)</title>
+  <meta name="description" content="The Strength Studio offers 1:1 sport-specific performance training for athletes ages 7+ in Lancaster, MA—youth, high school, college, and beyond. Strength, mobility, mechanics, and recovery for results and longevity." />
+
+  <style>
+    :root{
+      --max: 1080px;
+
+      --bg: #070A12;
+      --panel: rgba(255,255,255,0.06);
+      --panel2: rgba(255,255,255,0.085);
+      --line: rgba(255,255,255,0.12);
+
+      --text: rgba(255,255,255,0.92);
+      --muted: rgba(255,255,255,0.72);
+
+      --accentA: #46D1FF;
+      --accentB: #FFB020;
+
+      --radius: 22px;
+      --radius2: 16px;
+
+      --shadow: 0 18px 50px rgba(0,0,0,0.45);
+    }
+
+    *{ box-sizing:border-box; }
+    html, body{ height:100%; }
+    body{
+      margin:0;
+      font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+      line-height:1.55;
+      color: var(--text);
+      background:
+        radial-gradient(1100px 650px at 18% 12%, rgba(70,209,255,0.22), transparent 55%),
+        radial-gradient(900px 520px at 88% 18%, rgba(255,176,32,0.18), transparent 55%),
+        radial-gradient(800px 520px at 50% 105%, rgba(70,209,255,0.10), transparent 60%),
+        var(--bg);
+    }
+
+    a{ color:inherit; }
+    .wrap{ max-width: var(--max); margin: 0 auto; padding: 0 20px; }
+
+    /* Top bar */
+    .topbar{
+      position: sticky;
+      top:0;
+      z-index: 50;
+      backdrop-filter: blur(10px);
+      background: rgba(7,10,18,0.6);
+      border-bottom: 1px solid var(--line);
+    }
+    .topbar .inner{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap: 14px;
+      padding: 12px 0;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap: 10px;
+      min-width: 220px;
+    }
+    .brand img{
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      object-fit: contain;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid var(--line);
+      padding: 4px;
+    }
+    .brand strong{ font-size: 14px; letter-spacing: 0.2px; }
+    nav{
+      display:flex;
+      gap: 14px;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+    }
+    nav a{
+      text-decoration:none;
+      font-size: 13px;
+      color: var(--muted);
+      padding: 8px 10px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+    }
+    nav a:hover{
+      color: var(--text);
+      border-color: var(--line);
+      background: rgba(255,255,255,0.04);
+    }
+
+    /* Hero */
+    header{
+      padding: 54px 0 18px;
+    }
+    .hero{
+      display:grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 18px;
+      align-items: stretch;
+    }
+    .heroCard{
+      border: 1px solid var(--line);
+      background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.04));
+      border-radius: var(--radius);
+      padding: 26px;
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+    .heroCard:before{
+      content:"";
+      position:absolute; inset:-2px;
+      background: radial-gradient(800px 400px at 15% 10%, rgba(70,209,255,0.22), transparent 55%),
+                  radial-gradient(700px 400px at 85% 10%, rgba(255,176,32,0.20), transparent 55%);
+      opacity: 0.8;
+      pointer-events:none;
+    }
+    .heroCard > *{ position: relative; z-index: 1; }
+
+    .logoBig{
+      width: 100%;
+      max-width: 320px;
+      height: auto;
+      display:block;
+      margin: 0 0 14px;
+      filter: drop-shadow(0 14px 24px rgba(0,0,0,0.35));
+    }
+    h1{
+      margin: 0 0 10px;
+      font-size: 44px;
+      letter-spacing: -0.03em;
+      line-height: 1.08;
+    }
+    .tag{
+      margin: 0 0 14px;
+      font-size: 18px;
+      color: var(--muted);
+    }
+    .lede{
+      margin: 0;
+      font-size: 16.5px;
+      color: rgba(255,255,255,0.86);
+      max-width: 760px;
+    }
+
+    .pillRow{
+      display:flex;
+      flex-wrap:wrap;
+      gap: 9px;
+      margin-top: 16px;
+    }
+    .pill{
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.05);
+      border-radius: 999px;
+      padding: 7px 10px;
+      font-size: 13px;
+      color: rgba(255,255,255,0.80);
+      white-space: nowrap;
+    }
+    .pill strong{ color: rgba(255,255,255,0.92); }
+
+    .btnRow{
+      display:flex;
+      flex-wrap:wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap: 8px;
+      padding: 12px 14px;
+      border-radius: 14px;
+      text-decoration:none;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.05);
+      color: var(--text);
+      font-weight: 650;
+      font-size: 14px;
+    }
+    .btn:hover{ background: rgba(255,255,255,0.08); }
+    .btn.primary{
+      border-color: transparent;
+      background: linear-gradient(90deg, rgba(70,209,255,0.95), rgba(255,176,32,0.95));
+      color: #071019;
+      box-shadow: 0 12px 32px rgba(0,0,0,0.35);
+    }
+    .btn.primary:hover{ filter: brightness(1.03); }
+    .btn.ghost{
+      background: transparent;
+    }
+
+    .sideCard{
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.05);
+      border-radius: var(--radius);
+      padding: 20px;
+      box-shadow: var(--shadow);
+    }
+    .sideCard h3{
+      margin: 0 0 10px;
+      font-size: 15px;
+      letter-spacing: 0.2px;
+    }
+    .checklist{
+      margin: 0;
+      padding: 0 0 0 18px;
+      color: rgba(255,255,255,0.82);
+      font-size: 14px;
+    }
+    .checklist li{ margin: 7px 0; }
+
+    /* Sections */
+    main{ padding: 18px 0 66px; }
+    section{ margin-top: 18px; }
+    .sectionTitle{
+      display:flex;
+      align-items:flex-end;
+      justify-content:space-between;
+      gap: 14px;
+      margin: 28px 0 14px;
+    }
+    h2{
+      margin:0;
+      font-size: 22px;
+      letter-spacing: -0.01em;
+    }
+    .sub{
+      margin:0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .grid2{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+    .grid3{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+    .card{
+      border: 1px solid var(--line);
+      border-radius: var(--radius2);
+      background: rgba(255,255,255,0.05);
+      padding: 16px;
+    }
+    .card h3{
+      margin: 0 0 8px;
+      font-size: 16px;
+    }
+    .small{
+      margin: 0;
+      color: rgba(255,255,255,0.80);
+      font-size: 14.5px;
+    }
+    .card ul{
+      margin: 10px 0 0 18px;
+      color: rgba(255,255,255,0.80);
+      font-size: 14.5px;
+    }
+
+    .notice{
+      border: 1px solid var(--line);
+      border-radius: var(--radius2);
+      background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.04));
+      padding: 16px;
+    }
+
+    .split{
+      display:grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 14px;
+      align-items: start;
+    }
+
+    /* Footer */
+    footer{
+      border-top: 1px solid var(--line);
+      padding: 22px 0 34px;
+      color: rgba(255,255,255,0.70);
+      font-size: 13px;
+    }
+    .footRow{
+      display:flex;
+      flex-wrap:wrap;
+      align-items:center;
+      justify-content:space-between;
+      gap: 10px;
+    }
+
+    /* Responsive */
+    @media (max-width: 980px){
+      .hero{ grid-template-columns: 1fr; }
+      .grid3{ grid-template-columns: 1fr; }
+      .grid2{ grid-template-columns: 1fr; }
+      .split{ grid-template-columns: 1fr; }
+      h1{ font-size: 36px; }
+      .logoBig{ max-width: 280px; }
+      nav{ display:none; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Sticky top bar -->
+  <div class="topbar">
+    <div class="wrap">
+      <div class="inner">
+        <div class="brand">
+          <!-- Small logo (optional). Uses same file as the main logo. -->
+          <img src="logo.png" alt="The Strength Studio logo" />
+          <div>
+            <strong>The Strength Studio</strong><br />
+            <span style="color:var(--muted); font-size:12px;">Lancaster, MA • Ages 7+</span>
+          </div>
+        </div>
+
+        <nav>
+          <a href="#who">Who We Train</a>
+          <a href="#pillars">Training Pillars</a>
+          <a href="#how">How It Works</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </div>
+
+  <header>
+    <div class="wrap">
+      <div class="hero">
+
+        <div class="heroCard">
+          <!-- Upload your logo to the repo and name it: logo.png -->
+          <img class="logoBig" src="logo.png" alt="The Strength Studio logo" />
+
+          <h1>1:1 sport-specific training that builds performance <span style="color:rgba(255,255,255,0.78);">and</span> longevity.</h1>
+
+          <p class="tag">
+            For athletes ages <strong>7+</strong> — youth, high school, collegiate, and beyond.
+          </p>
+
+          <p class="lede">
+            Based in <strong>Lancaster, Massachusetts</strong>, The Strength Studio delivers true one-on-one coaching built around
+            your sport, developmental stage, goals, and competitive demands. No crowds. No cookie-cutter templates.
+            Just a clear plan focused on strength, mobility, mechanics, and recovery—so athletes improve and stay durable.
+          </p>
+
+          <div class="pillRow">
+            <div class="pill"><strong>True 1:1 coaching</strong> (limited capacity)</div>
+            <div class="pill">Youth → High School → College → Beyond</div>
+            <div class="pill">Injury-aware programming</div>
+            <div class="pill">Biomechanics + movement efficiency</div>
+            <div class="pill">In-person + hybrid options</div>
+          </div>
+
+          <div class="btnRow">
+            <a class="btn primary" href="[YOUR BOOKING LINK]" target="_blank" rel="noopener">Book a Consultation</a>
+            <a class="btn" href="mailto:[YOU@EMAIL.COM]">Email</a>
+            <a class="btn ghost" href="https://instagram.com/the_strength_studio" target="_blank" rel="noopener">Instagram @the_strength_studio</a>
+          </div>
+        </div>
+
+        <div class="sideCard">
+          <h3>What makes The Strength Studio different</h3>
+          <ul class="checklist">
+            <li><strong>Individual First:</strong> every athlete gets a plan tailored to their needs.</li>
+            <li><strong>Long-Term Development:</strong> performance without sacrificing health.</li>
+            <li><strong>Process Over Hype:</strong> mastery through progression and repetition.</li>
+            <li><strong>Education:</strong> athletes learn the “why” behind the work.</li>
+            <li><strong>Integrity:</strong> evidence-based, athlete-centered coaching decisions.</li>
+          </ul>
+
+          <div class="notice" style="margin-top:14px;">
+            <strong style="display:block; margin-bottom:6px;">Training locations</strong>
+            <div style="color:rgba(255,255,255,0.80); font-size:14.5px;">
+              Sessions may take place in a dedicated performance space, partner gyms/centers, on-site at sport facilities
+              (fields, pools, courts), or via hybrid programming.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap">
+
+      <!-- WHO WE TRAIN -->
+      <section id="who">
+        <div class="sectionTitle">
+          <h2>Who We Train</h2>
+          <p class="sub">Clear pathways for every stage: youth → high school → college → beyond.</p>
+        </div>
+
+        <div class="grid2">
+          <div class="card">
+            <h3>Youth Athletes (Ages 7–13)</h3>
+            <p class="small">
+              Perfect for new or developing athletes and multi-sport kids who need coordination, confidence, and movement literacy.
+              Parent priorities we support: <strong>safety, technique, injury prevention, and enjoyment</strong>.
+            </p>
+            <ul>
+              <li>Fundamental movement skills (run, jump, land, change direction)</li>
+              <li>Balance, agility, coordination, body awareness</li>
+              <li>Age-appropriate resistance (bodyweight, bands, light implements)</li>
+              <li>Joint health + injury prevention habits</li>
+              <li>Shorter sessions (30–45 minutes) with simple cues + visual feedback</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>High School, College, and Beyond (Ages 14+)</h3>
+            <p class="small">
+              For competitive athletes pursuing measurable gains—strength, power, speed, and efficiency—built around
+              <strong>season demands</strong> and long-term durability.
+            </p>
+            <ul>
+              <li>Advanced strength & conditioning + periodized training cycles</li>
+              <li>Power, speed, agility, and sport-specific output</li>
+              <li>High-volume, high-quality reps with technical refinement</li>
+              <li>Data-informed adjustments + load management</li>
+              <li>Longer sessions (60–90 minutes) with detailed breakdown and progression</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="notice" style="margin-top:14px;">
+          <strong>Sport-specific tracks (examples):</strong>
+          Swimming • Soccer • Gymnastics • Football • Basketball • Lacrosse • Running • Volleyball — and more.
+        </div>
+      </section>
+
+      <!-- TRAINING PILLARS -->
+      <section id="pillars">
+        <div class="sectionTitle">
+          <h2>Training Pillars</h2>
+          <p class="sub">A complete performance system—not random workouts.</p>
+        </div>
+
+        <div class="grid3">
+          <div class="card">
+            <h3>Strength & Conditioning</h3>
+            <p class="small">Sport-specific strength, power, speed, agility, core and stability—built for your stage and season.</p>
+          </div>
+          <div class="card">
+            <h3>Flexibility & Mobility</h3>
+            <p class="small">Joint health and range of motion tailored to sport demands, plus recovery support and injury mitigation.</p>
+          </div>
+          <div class="card">
+            <h3>Movement Efficiency & Biomechanics</h3>
+            <p class="small">Running, jumping, throwing, swimming, lifting patterns—cleaner mechanics and smarter load management.</p>
+          </div>
+          <div class="card">
+            <h3>Repetition & Skill Development</h3>
+            <p class="small">High-quality, intentional repetitions with feedback—mastery through progression and consistency.</p>
+          </div>
+          <div class="card">
+            <h3>Recovery & Longevity</h3>
+            <p class="small">Active recovery protocols, load monitoring, and education on rest and nutrition basics.</p>
+          </div>
+          <div class="card">
+            <h3>Hybrid / Remote Programming</h3>
+            <p class="small">Structured plans + check-ins for athletes who travel, train off-site, or need flexible support.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- HOW IT WORKS -->
+      <section id="how">
+        <div class="sectionTitle">
+          <h2>How It Works</h2>
+          <p class="sub">Simple, professional, and athlete-centered from day one.</p>
+        </div>
+
+        <div class="grid2">
+          <div class="card">
+            <h3>1) Consult + Assessment</h3>
+            <p class="small">We learn your sport, goals, injury history, schedule, and current training—then assess movement and priorities.</p>
+          </div>
+          <div class="card">
+            <h3>2) Customized Plan</h3>
+            <p class="small">You receive individualized programming and a clear pathway—youth development or performance optimization.</p>
+          </div>
+          <div class="card">
+            <h3>3) True 1:1 Sessions</h3>
+            <p class="small">No distractions. Every rep matters. Coaching is precise, progressive, and aligned to your season.</p>
+          </div>
+          <div class="card">
+            <h3>4) Track + Adjust</h3>
+            <p class="small">We monitor progress and adjust based on readiness, competition timing, and how your body responds.</p>
+          </div>
+        </div>
+
+        <div class="notice" style="margin-top:14px;">
+          <strong>Our promise:</strong> premium, individualized service—scaled through coaching quality, not athlete volume.
+        </div>
+      </section>
+
+      <!-- ABOUT / MISSION -->
+      <section id="about">
+        <div class="sectionTitle">
+          <h2>Mission & Vision</h2>
+          <p class="sub">Built on long-term athlete development and sound biomechanics.</p>
+        </div>
+
+        <div class="split">
+          <div class="notice">
+            <p style="margin:0 0 10px; color:rgba(255,255,255,0.86);">
+              <strong>Mission:</strong> Develop resilient, confident, high-performing athletes through individualized, sport-specific training
+              rooted in sound biomechanics and long-term athlete development.
+            </p>
+            <p style="margin:0; color:rgba(255,255,255,0.86);">
+              <strong>Vision:</strong> Be the premier 1:1 training provider for athletes seeking precision coaching, measurable results,
+              and sustainable athletic careers.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Competitive Advantages</h3>
+            <ul style="margin:0; padding-left:18px; color:rgba(255,255,255,0.80); font-size:14.5px;">
+              <li>True 1:1 coaching (no generic programming)</li>
+              <li>Sport-specific expertise</li>
+              <li>Clear youth → performance pathways</li>
+              <li>Trust-based coach-athlete relationships</li>
+              <li>Injury-aware programming for longevity</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- PRICING -->
+      <section id="pricing">
+        <div class="sectionTitle">
+          <h2>Pricing</h2>
+          <p class="sub">Transparent ranges + packages available.</p>
+        </div>
+
+        <div class="split">
+          <div class="notice">
+            <p style="margin:0 0 10px; color:rgba(255,255,255,0.86);">
+              Pricing reflects true one-on-one coaching and customized programming. Discounted multi-session packages and monthly plans are available.
+            </p>
+            <p style="margin:0; color:rgba(255,255,255,0.86);">
+              <strong>Youth 1:1 Training:</strong> $60–$80 per session<br/>
+              <strong>High School / College / Beyond 1:1:</strong> $90–$130 per session<br/>
+              <strong>Hybrid / Remote Programming:</strong> custom pricing based on scope
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Limited Capacity</h3>
+            <p class="small">Scheduling is appointment-based with limited athlete capacity to protect results and coaching quality.</p>
+            <div class="btnRow" style="margin-top:12px;">
+              <a class="btn primary" href="[YOUR BOOKING LINK]" target="_blank" rel="noopener">Start with a Consult</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact">
+        <div class="sectionTitle">
+          <h2>Contact</h2>
+          <p class="sub">Lancaster, Massachusetts • By appointment • Ages 7+</p>
+        </div>
+
+        <div class="notice">
+          <p style="margin:0 0 12px; color:rgba(255,255,255,0.86);">
+            <strong>Location:</strong> Lancaster, MA (serving surrounding Central Massachusetts communities)<br/>
+            <strong>Email:</strong> <a href="mailto:[YOU@EMAIL.COM]">[YOU@EMAIL.COM]</a><br/>
+            <strong>Phone/Text:</strong> <a href="tel:[YOUR NUMBER]">[YOUR NUMBER]</a><br/>
+            <strong>Instagram:</strong> <a href="https://instagram.com/the_strength_studio" target="_blank" rel="noopener">@the_strength_studio</a><br/>
+            <strong>Book:</strong> <a href="[YOUR BOOKING LINK]" target="_blank" rel="noopener">Schedule a consultation</a>
+          </p>
+
+          <div class="btnRow">
+            <a class="btn primary" href="[YOUR BOOKING LINK]" target="_blank" rel="noopener">Book a Consultation</a>
+            <a class="btn" href="https://instagram.com/the_strength_studio" target="_blank" rel="noopener">Follow on Instagram</a>
+            <a class="btn ghost" href="mailto:[YOU@EMAIL.COM]">Email Us</a>
+          </div>
+
+          <p style="margin:14px 0 0; color:rgba(255,255,255,0.80); font-size:14.5px;">
+            Not sure where to start? Share your sport, age, goals, and season timeline—and we’ll recommend the best pathway.
+          </p>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="footRow">
+        <div>© <span id="y"></span> The Strength Studio • Lancaster, Massachusetts</div>
+        <div>
+          <a href="https://instagram.com/the_strength_studio" target="_blank" rel="noopener" style="text-decoration:none;">
+            Instagram @the_strength_studio
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
